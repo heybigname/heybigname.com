@@ -1,0 +1,50 @@
+@include module('svg') {
+  position: absolute;
+  left:0;
+  top:0;
+  margin: 0;
+  padding: 0;
+
+
+  @include element('polygon') {
+
+    @include modifier('dark-blue') {
+      fill: $blueDark;
+    }
+
+    @include modifier('darker-blue') {
+      fill: $blueDarker;
+    }
+
+    @include modifier('darkest-blue') {
+      fill: $blueDarkest;
+    }
+
+    @include modifier('dark-toothpaste') {
+      fill: $toothpasteDark;
+    }
+
+    @include modifier('darker-toothpaste') {
+      fill: $toothpasteDarker;
+    }
+
+    @include modifier('darkest-toothpaste') {
+      fill: $toothpasteDarkest
+    }
+
+    @include modifier('dark-red') {
+      fill: $redDark;
+    }
+
+    @include modifier('white') {
+      fill: #fff;
+    }
+
+    @include modifier('hide-on-mobile') {
+      display:none;
+      @include breakpoint($tablet) {
+        display:block;
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@
 
   @include element('h1') {
     text-transform: uppercase;
-    font-size:2.2em;
+    font-size:1.8em;
     font-family:'gotham_extralightregular';
     font-weight:normal;
     margin:0;
@@ -27,7 +27,7 @@
 
   @include element('h2') {
     text-transform: uppercase;
-    font-size:1.4em;
+    font-size:1.2em;
     font-family: 'gotham_boldregular';
     font-weight:normal;
     margin:0;

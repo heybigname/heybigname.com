@@ -432,6 +432,7 @@ table {
 
 .section--introduction {
   text-align: center;
+  height: 300px;
 }
 
 @media (min-width: 960px) {
@@ -441,7 +442,7 @@ table {
 }
 .section--about {
   background: #0b486b;
-  min-height: 1000px;
+  height: 1000px;
 }
 
 @media (min-width: 960px) {
@@ -464,23 +465,6 @@ table {
   height: 750px;
 }
 
-.section__svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.section__svg--hide-on-mobile {
-  display: none;
-}
-
-@media (min-width: 960px) {
-  .section__svg--hide-on-mobile {
-    display: block;
-  }
-}
 .pusher {
   width: 100%;
   margin: 0;
@@ -505,7 +489,7 @@ table {
   position: relative;
   padding: 30px;
   margin: auto;
-  top: 20%;
+  top: 10%;
   z-index: 50;
   text-align: center;
 }
@@ -573,7 +557,7 @@ table {
 }
 .introduction__h1 {
   text-transform: uppercase;
-  font-size: 2.2em;
+  font-size: 1.8em;
   font-family: 'gotham_extralightregular';
   font-weight: normal;
   margin: 0;
@@ -588,7 +572,7 @@ table {
 }
 .introduction__h2 {
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-family: 'gotham_boldregular';
   font-weight: normal;
   margin: 0;
@@ -824,4 +808,54 @@ table {
   background: white;
   overflow: hidden;
   margin: 0 auto 20px auto;
+}
+
+.svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.svg__polygon--dark-blue {
+  fill: #031f38;
+}
+
+.svg__polygon--darker-blue {
+  fill: #052e4c;
+}
+
+.svg__polygon--darkest-blue {
+  fill: #031626;
+}
+
+.svg__polygon--dark-toothpaste {
+  fill: #164e4e;
+}
+
+.svg__polygon--darker-toothpaste {
+  fill: #246666;
+}
+
+.svg__polygon--darkest-toothpaste {
+  fill: #082929;
+}
+
+.svg__polygon--dark-red {
+  fill: #662424;
+}
+
+.svg__polygon--white {
+  fill: #fff;
+}
+
+.svg__polygon--hide-on-mobile {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .svg__polygon--hide-on-mobile {
+    display: block;
+  }
 }
