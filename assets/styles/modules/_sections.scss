@@ -23,7 +23,7 @@
 
   @include modifier('collective') {
     background: $toothpaste;
-    height:1300px;
+    height:1500px;
 
     @include breakpoint($tablet) {
       height:750px;

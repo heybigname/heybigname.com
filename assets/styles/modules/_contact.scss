@@ -28,5 +28,9 @@
     line-height:2.2;
     color:white;
     padding:0 0 20px 0;
+
+    @include modifier('bold') {
+      font-family: 'gotham_bookregular'
+    }
   }
 }

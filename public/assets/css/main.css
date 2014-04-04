@@ -451,7 +451,7 @@ table {
 }
 .section--collective {
   background: #3b8686;
-  height: 1300px;
+  height: 1500px;
 }
 
 @media (min-width: 960px) {
@@ -460,7 +460,7 @@ table {
   }
 }
 .section--contact {
-  background: #985b00;
+  background: #863b3b;
   height: 750px;
 }
 
@@ -725,18 +725,22 @@ table {
   padding: 0 0 20px 0;
 }
 
+.contact__p--bold {
+  font-family: "gotham_bookregular";
+}
+
 .collective__content {
   position: relative;
   padding: 30px;
   margin: auto;
-  top: 15%;
+  top: 12%;
   z-index: 50;
   text-align: center;
 }
 
 @media (min-width: 960px) {
   .collective__content {
-    top: 20%;
+    top: 15%;
     width: 900px;
   }
 }
@@ -803,6 +807,16 @@ table {
     float: left;
   }
 }
+.collective__person__social-list {
+  margin: 0;
+  padding: 15px 0 0 0;
+}
+
+.collective__person__social-item {
+  display: inline-block;
+  padding: 3px 2px;
+}
+
 .avatar {
   width: 145px;
   height: 145px;
