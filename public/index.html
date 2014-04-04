@@ -13,10 +13,10 @@
     <header class="header">
         <a class="header__logo"><span>Big</span>name</a>
         <nav class="navigation">
-            <ul>
-                <li class="navigation__item"><a class="navigation__link" href="#">about us</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">the collective</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">contact us</a></li>
+            <ul class="navigation__ul">
+                <li class="navigation__item"><a class="navigation__link __scrollto" href="#about-us">about us</a></li>
+                <li class="navigation__item"><a class="navigation__link __scrollto" href="#the-collective">the collective</a></li>
+                <li class="navigation__item"><a class="navigation__link __scrollto" href="#contact-us">contact us</a></li>
                 <li class="navigation__item"><a class="navigation__link navigation__link--thick" href="#">articles</a></li>
             </ul>
         </nav>
@@ -28,16 +28,16 @@
                 <h1 class="introduction__h1">Creation by collaboration</h1>
                 <h2 class="introduction__h2">Pushing the limit by pushing together</h2>
             </hgroup>
-            <a href="#" class="button button--inverse">Learn More</a>
+            <a href="#about-us" class="button button--inverse __scrollto">Learn More</a>
         </div>
     </section>
 
-     <section class="section section--about">
+     <section class="section section--about" id="about-us">
              <div class="about__content">
                  <h2 class="about__h1">About Us</h2>
                  <p class="about__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac placerat orci, ac aliquet magna. Pellentesque metus tellus, viverra sed vulputate nec, porttitor nec augue. Sed risus diam, dapibus pulvinar nibh quis, posuere commodo purus. Ut non cursus nibh. Praesent tempor ipsum sed accumsan congue. Sed lacinia viverra diam, nec condimentum magna malesuada vel. Phasellus at volutpat velit, quis convallis lorem.
                  </p>
-                 <a href="#" class="button">The Collective</a>
+                 <a href="#the-collective" class="button __scrollto">The Collective</a>
              </div>
 
              <svg class="section__svg" viewBox="0 0 1 1" preserveAspectRatio="none" width="100%" y="0" x="0" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@
 
      <div class="pusher pusher--darkblue"></div>
 
-     <section class="section section--collective">
+     <section class="section section--collective" id="the-collective">
          <div class="collective__content">
              <h2 class="collective__h2">The collective</h2>
 
@@ -80,7 +80,7 @@
                      </hgroup>
                  </div>
              </div>
-             <a href="#" class="button">Contact us</a>
+             <a href="#contact-us" class="button __scrollto">Contact us</a>
          </div>
 
          <svg class="section__svg" viewBox="0 0 1 1" preserveAspectRatio="none" width="100%" y="0" x="0" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +97,7 @@
 
      <div class="pusher pusher--darkgreen"></div>
 
-     <section class="section section--contact">
+     <section class="section section--contact" id="contact-us">
          <div class="contact__content">
             <h2 class="contact__h2">Contact Us</h2>
             <p class="contact__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac placerat orci, ac aliquet magna. Pellentesque metus tellus, viverra sed vulputate nec, porttitor nec augue. Sed risus diam, dapibus pulvinar nibh quis, posuere commodo purus. Ut non cursus nibh. Praesent tempor ipsum sed accumsan congue. Sed lacinia viverra diam, nec condimentum magna malesuada vel. Phasellus at volutpat velit, quis convallis lorem.
@@ -107,10 +107,13 @@
          <svg class="section__svg" viewBox="0 0 1 1" preserveAspectRatio="none" width="100%" y="0" x="0" xmlns="http://www.w3.org/2000/svg">
              <polygon points='0 0, 0 .1, 1 0' style="fill:#082929" />
              <polygon class="section__svg--hide-on-mobile" points='.5 0, 1 0, 1 .2' style="fill:#082929" />
-             <polygon class="section__svg--hide-on-mobile" points='0 .4, 0 .1, .2 .08' style="fill:#474710" />
+             <polygon class="section__svg--hide-on-mobile" points='0 .4, 0 .1, .2 .08' style="fill:#824f00" />
              <polygon points='0 .8, 0 1, 1 1' style="fill:#fff" />
-             <polygon class="section__svg--hide-on-mobile" points='0 .7, 0 .8, 1 1' style="fill:#474710" />
+             <polygon class="section__svg--hide-on-mobile" points='0 .7, 0 .8, 1 1' style="fill:#824f00" />
          </svg>
      </section>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="assets/scripts/main.min.js"></script>
 </body>
 </html>

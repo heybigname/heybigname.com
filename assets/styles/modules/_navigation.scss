@@ -1,16 +1,28 @@
 @include module('navigation') {
 
-  display: none;
-
   @include breakpoint($desktop) {
-    display:block;
+    float: right;
   }
 
+  @include element('ul') {
+    padding: 30px 0 0 0;
+    margin: 0;
 
-  float: right;
+    @include breakpoint($desktop) {
+      padding: 6px 0 0 0;
+    }
+  }
 
   @include element('item') {
-    display: inline;
+    display: block;
+    float: left;
+    width:50%;
+
+    @include breakpoint($desktop) {
+      float: left;
+      display: inline;
+      width: auto;
+    }
   }
 
   @include element('link') {
@@ -22,6 +34,13 @@
     border:2px solid white;
     padding:7px 12px;
     color:$body;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    @include breakpoint($desktop) {
+      display:block;
+    }
 
     &:hover {
       background: $blue;

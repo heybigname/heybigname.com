@@ -460,7 +460,7 @@ table {
   }
 }
 .section--contact {
-  background: #767214;
+  background: #985b00;
   height: 750px;
 }
 
@@ -638,20 +638,34 @@ table {
     float: left;
   }
 }
-.navigation {
-  display: none;
-  float: right;
+@media (min-width: 1024px) {
+  .navigation {
+    float: right;
+  }
+}
+.navigation__ul {
+  padding: 30px 0 0 0;
+  margin: 0;
 }
 
 @media (min-width: 1024px) {
-  .navigation {
-    display: block;
+  .navigation__ul {
+    padding: 6px 0 0 0;
   }
 }
 .navigation__item {
-  display: inline;
+  display: block;
+  float: left;
+  width: 50%;
 }
 
+@media (min-width: 1024px) {
+  .navigation__item {
+    float: left;
+    display: inline;
+    width: auto;
+  }
+}
 .navigation__link {
   font-family: 'gotham_bookregular';
   text-decoration: none;
@@ -661,8 +675,16 @@ table {
   border: 2px solid white;
   padding: 7px 12px;
   color: #0b486b;
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 
+@media (min-width: 1024px) {
+  .navigation__link {
+    display: block;
+  }
+}
 .navigation__link:hover {
   background: #0b486b;
   color: #fff;
