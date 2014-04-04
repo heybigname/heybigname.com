@@ -1,0 +1,7 @@
+@mixin element($name)
+{
+    &__#{$name}
+    {
+        @content;
+    }
+}

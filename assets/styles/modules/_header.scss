@@ -1,0 +1,29 @@
+@include module('header') {
+  @include clearfix;
+
+  margin: auto;
+  padding:30px 0 0 0;
+
+  @include breakpoint($desktop) {
+    width:960px;
+  }
+
+  @include element('logo') {
+    text-align: center;
+    padding:10px 0 0 0;
+    display: block;
+    font-size:1.3em;
+    text-transform: uppercase;
+    font-family:'gotham_bookregular';
+    color:$body;
+
+    span {
+      text-align: left;
+      font-family: 'gotham_boldregular';
+    }
+
+    @include breakpoint($tablet) {
+      float: left;
+    }
+  }
+}

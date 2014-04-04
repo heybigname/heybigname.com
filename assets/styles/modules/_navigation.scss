@@ -1,0 +1,35 @@
+@include module('navigation') {
+
+  display: none;
+
+  @include breakpoint($desktop) {
+    display:block;
+  }
+
+
+  float: right;
+
+  @include element('item') {
+    display: inline;
+  }
+
+  @include element('link') {
+    font-family: 'gotham_bookregular';
+    text-decoration: none;
+    color:$blueDark;
+    text-transform: uppercase;
+    font-size:.8em;
+    border:2px solid white;
+    padding:7px 12px;
+    color:$body;
+
+    &:hover {
+      background: $blue;
+      color:#fff;
+    }
+
+    @include modifier('thick') {
+      font-family: 'gotham_boldregular';
+    }
+  }
+}

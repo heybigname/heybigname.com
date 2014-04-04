@@ -1,0 +1,19 @@
+@include module('pusher') {
+
+  width:100%;
+  margin: 0;
+  padding:0;
+  height: 200px;
+
+  @include breakpoint($tablet) {
+    height:400px;
+  }
+
+  @include modifier('darkblue') {
+    background: $blueDarkest;
+  }
+
+  @include modifier('darkgreen') {
+    background: $toothpasteDarkest;
+  }
+}

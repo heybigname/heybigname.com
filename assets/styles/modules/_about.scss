@@ -1,0 +1,31 @@
+@include module('about') {
+
+  @include element('content') {
+    position: relative;
+    padding: 30px;
+    margin:auto;
+    top:20%;
+    z-index:50;
+    text-align:center;
+
+    @include breakpoint($tablet) {
+      width:700px;
+    }
+  }
+
+  @include element('h1') {
+    font-family: 'gotham_extralightregular';
+    font-weight:normal;
+    text-transform: uppercase;
+    font-size:1.8em;
+    color:white;
+  }
+
+  @include element('p') {
+    font-family: 'gotham_extralightregular';
+    font-size:.9em;
+    line-height:2.2;
+    color:white;
+    padding:0 0 20px 0;
+  }
+}

@@ -1,0 +1,8 @@
+/////////////////////////
+// Fluid unit function //
+/////////////////////////
+
+@function is-fluid-unit($unit)
+{
+    @return $unit == '%';
+}

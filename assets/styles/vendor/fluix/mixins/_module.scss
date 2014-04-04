@@ -1,0 +1,7 @@
+@mixin module($name) 
+{
+    .#{$name} 
+    {
+        @content;
+    }
+}

@@ -1,0 +1,8 @@
+@include module('avatar') {
+  width:145px;
+  height:145px;
+  border-radius: 145px;
+  background: white;
+  overflow: hidden;
+  margin: 0 auto 20px auto;
+}

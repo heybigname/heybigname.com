@@ -1,0 +1,38 @@
+@include module('introduction') {
+
+  @include element('content') {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+
+    @include breakpoint($phone) {
+      padding:30px;
+    }
+  }
+
+  @include element('h1') {
+    text-transform: uppercase;
+    font-size:2.2em;
+    font-family:'gotham_extralightregular';
+    font-weight:normal;
+    margin:0;
+    padding: 0;
+    color:$body;
+
+    @include breakpoint($tablet) {
+      font-size:2.5em;
+    }
+  }
+
+  @include element('h2') {
+    text-transform: uppercase;
+    font-size:1.4em;
+    font-family: 'gotham_boldregular';
+    font-weight:normal;
+    margin:0;
+    padding: 15px 0 30px 0;
+    color:$body;
+  }
+
+}

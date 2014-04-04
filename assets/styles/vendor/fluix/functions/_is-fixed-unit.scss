@@ -1,0 +1,8 @@
+/////////////////////////
+// Fixed unit function //
+/////////////////////////
+
+@function is-fixed-unit($unit)
+{
+    @return $unit == 'em' or $unit == 'rem' or $unit == 'px';
+}

@@ -1,0 +1,25 @@
+@include module('button') {
+  text-decoration: none;
+  font-family: 'gotham_bookregular';
+  font-weight:normal;
+  text-transform: uppercase;
+  font-size:.9em;
+  border:2px solid white;
+  color:white;
+  padding:7px 13px;
+
+  &:hover {
+    background: white;
+    color:$blue;
+  }
+
+  @include modifier('inverse') {
+    border-color:$blue;
+    color:$blue;
+
+    &:hover {
+      background: $blue;
+      color:#fff;
+    }
+  }
+}

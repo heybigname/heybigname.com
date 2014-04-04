@@ -1,0 +1,26 @@
+// Import Bourbon and Bourbon Neat
+@import "../../node_modules/node-bourbon/assets/stylesheets/_bourbon.scss";
+@import "../../node_modules/node-neat/assets/stylesheets/_neat.scss";
+
+// Import Fluix
+@import "../../assets/styles/vendor/fluix/_fluix.scss";
+
+// Include normalize
+@import "vendor/normalize";
+
+// Settings
+@import "settings/colors";
+@import "settings/breakpoints";
+
+// Modules
+@import "settings/fonts";
+@import "modules/sections";
+@import "modules/pusher";
+@import "modules/about";
+@import "modules/buttons";
+@import "modules/introduction";
+@import "modules/header";
+@import "modules/navigation";
+@import "modules/contact";
+@import "modules/collective";
+@import "modules/avatar";
