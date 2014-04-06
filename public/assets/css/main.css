@@ -462,7 +462,7 @@ table {
 }
 .section--contact {
   background: #863b3b;
-  height: 750px;
+  height: 550px;
 }
 
 .pusher {
@@ -489,7 +489,7 @@ table {
   position: relative;
   padding: 30px;
   margin: auto;
-  top: 10%;
+  top: 18%;
   z-index: 50;
   text-align: center;
 }
@@ -722,8 +722,8 @@ table {
   text-decoration: none;
 }
 
-.test-gradient {
-  background: linear, to right, #3b8686 0%, #164e4e 100%;
+.contact__a:hover {
+  color: #031626;
 }
 
 .collective__content {

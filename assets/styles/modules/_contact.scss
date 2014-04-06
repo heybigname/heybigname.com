@@ -41,9 +41,9 @@
     color:white;
     padding:0 0 20px 0;
     text-decoration: none;
-  }
-}
 
-.test-gradient {
-  background: linear-gradient(to right, #3b8686 0%,#164e4e 100%);
+    &:hover {
+      color:$body;
+    }
+  }
 }
