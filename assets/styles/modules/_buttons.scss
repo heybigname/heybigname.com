@@ -14,11 +14,11 @@
   }
 
   @include modifier('inverse') {
-    border-color:$blue;
-    color:$blue;
+    border-color:$blueDarkest;
+    color:$blueDarkest;
 
     &:hover {
-      background: $blue;
+      background: $blueDarkest;
       color:#fff;
     }
   }

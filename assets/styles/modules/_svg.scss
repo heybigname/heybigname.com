@@ -8,16 +8,35 @@
 
   @include element('polygon') {
 
+    @include modifier('lighter-blue') {
+      fill: #075887;
+      stop-color: #075887;
+      stop-opacity:1;
+      opacity: 0.3;
+    }
+
+    @include modifier('blue') {
+      fill: $blue;
+      stop-color: $blue;
+      stop-opacity:1
+    }
+
     @include modifier('dark-blue') {
       fill: $blueDark;
+      stop-color: $blueDark;
+      stop-opacity:1
     }
 
     @include modifier('darker-blue') {
       fill: $blueDarker;
+      stop-color: $blueDarker;
+      stop-opacity:1
     }
 
     @include modifier('darkest-blue') {
       fill: $blueDarkest;
+      stop-color: $blueDarkest;
+      stop-opacity:1
     }
 
     @include modifier('dark-toothpaste') {

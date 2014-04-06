@@ -441,7 +441,7 @@ table {
   }
 }
 .section--about {
-  background: #0b486b;
+  background: #3772b7;
   height: 1000px;
 }
 
@@ -500,7 +500,7 @@ table {
   }
 }
 .about__h1 {
-  font-family: 'gotham_extralightregular';
+  font-family: 'gotham_bookregular';
   font-weight: normal;
   text-transform: uppercase;
   font-size: 1.8em;
@@ -508,9 +508,9 @@ table {
 }
 
 .about__p {
-  font-family: 'gotham_extralightregular';
-  font-size: .9em;
-  line-height: 2.2;
+  font-family: 'gotham_bookregular';
+  font-size: 1em;
+  line-height: 2;
   color: white;
   padding: 0 0 20px 0;
 }
@@ -528,16 +528,16 @@ table {
 
 .button:hover {
   background: white;
-  color: #0b486b;
+  color: #3772b7;
 }
 
 .button--inverse {
-  border-color: #0b486b;
-  color: #0b486b;
+  border-color: #031626;
+  color: #031626;
 }
 
 .button--inverse:hover {
-  background: #0b486b;
+  background: #031626;
   color: #fff;
 }
 
@@ -562,7 +562,7 @@ table {
   font-weight: normal;
   margin: 0;
   padding: 0;
-  color: #0b486b;
+  color: #031626;
 }
 
 @media (min-width: 960px) {
@@ -577,7 +577,7 @@ table {
   font-weight: normal;
   margin: 0;
   padding: 15px 0 30px 0;
-  color: #0b486b;
+  color: #031626;
 }
 
 .header {
@@ -609,7 +609,7 @@ table {
   font-size: 1.3em;
   text-transform: uppercase;
   font-family: 'gotham_bookregular';
-  color: #0b486b;
+  color: #031626;
 }
 
 .header__logo span {
@@ -653,12 +653,12 @@ table {
 .navigation__link {
   font-family: 'gotham_bookregular';
   text-decoration: none;
-  color: #031f38;
+  color: #1c4982;
   text-transform: uppercase;
   font-size: .8em;
   border: 2px solid white;
   padding: 7px 12px;
-  color: #0b486b;
+  color: #031626;
   width: 100%;
   display: block;
   text-align: center;
@@ -670,7 +670,7 @@ table {
   }
 }
 .navigation__link:hover {
-  background: #0b486b;
+  background: #031626;
   color: #fff;
 }
 
@@ -693,7 +693,7 @@ table {
   }
 }
 .contact__h2 {
-  font-family: 'gotham_extralightregular';
+  font-family: 'gotham_bookregular';
   font-weight: normal;
   text-transform: uppercase;
   font-size: 1.8em;
@@ -702,8 +702,8 @@ table {
 }
 
 .contact__p {
-  font-family: 'gotham_extralightregular';
-  font-size: .9em;
+  font-family: 'gotham_bookregular';
+  font-size: 1em;
   line-height: 2.2;
   color: white;
   padding: 0 0 20px 0;
@@ -711,6 +711,19 @@ table {
 
 .contact__p--bold {
   font-family: "gotham_bookregular";
+}
+
+.contact__a {
+  font-family: 'gotham_bookregular';
+  font-size: 1em;
+  line-height: 2.2;
+  color: white;
+  padding: 0 0 20px 0;
+  text-decoration: none;
+}
+
+.test-gradient {
+  background: linear, to right, #3b8686 0%, #164e4e 100%;
 }
 
 .collective__content {
@@ -729,7 +742,7 @@ table {
   }
 }
 .collective__h2 {
-  font-family: 'gotham_extralightregular';
+  font-family: 'gotham_bookregular';
   font-weight: normal;
   text-transform: uppercase;
   font-size: 1.8em;
@@ -741,7 +754,7 @@ table {
 .collective__p {
   font-family: 'gotham_extralightregular';
   font-size: .9em;
-  line-height: 2.2;
+  line-height: 2;
   color: white;
   padding: 0 0 20px 0;
 }
@@ -818,16 +831,35 @@ table {
   padding: 0;
 }
 
+.svg__polygon--lighter-blue {
+  fill: #075887;
+  stop-color: #075887;
+  stop-opacity: 1;
+  opacity: 0.3;
+}
+
+.svg__polygon--blue {
+  fill: #3772b7;
+  stop-color: #3772b7;
+  stop-opacity: 1;
+}
+
 .svg__polygon--dark-blue {
-  fill: #031f38;
+  fill: #1c4982;
+  stop-color: #1c4982;
+  stop-opacity: 1;
 }
 
 .svg__polygon--darker-blue {
-  fill: #052e4c;
+  fill: #275997;
+  stop-color: #275997;
+  stop-opacity: 1;
 }
 
 .svg__polygon--darkest-blue {
   fill: #031626;
+  stop-color: #031626;
+  stop-opacity: 1;
 }
 
 .svg__polygon--dark-toothpaste {

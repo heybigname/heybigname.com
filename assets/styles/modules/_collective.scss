@@ -15,7 +15,7 @@
   }
 
   @include element('h2') {
-    font-family: 'gotham_extralightregular';
+    font-family: 'gotham_bookregular';
     font-weight:normal;
     text-transform: uppercase;
     font-size:1.8em;
@@ -27,7 +27,7 @@
   @include element('p') {
     font-family: 'gotham_extralightregular';
     font-size:.9em;
-    line-height:2.2;
+    line-height:2;
     color:white;
     padding:0 0 20px 0;
   }
