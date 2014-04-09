@@ -1,46 +1,81 @@
-$( document ).ready(function() {
-    $('.__scrollto').scrollTo();
+// easing functions http://goo.gl/5HLl8
+Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d/2;
+    if (t < 1) {
+        return c/2*t*t + b
+    }
+    t--;
+    return -c/2 * (t*(t-2) - 1) + b;
+};
+
+Math.easeInCubic = function(t, b, c, d) {
+    var tc = (t/=d)*t*t;
+    return b+c*(tc);
+};
+
+Math.inOutQuintic = function(t, b, c, d) {
+    var ts = (t/=d)*t,
+        tc = ts*t;
+    return b+c*(6*tc*ts + -15*ts*ts + 10*tc);
+};
+
+// requestAnimationFrame for Smart Animating http://goo.gl/sx5sts
+var requestAnimFrame = (function(){
+    return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ){ window.setTimeout(callback, 1000 / 60); };
+})();
+
+function scrollTo(to, callback, duration) {
+    // figure out if this is moz || IE because they use documentElement
+    var doc = (navigator.userAgent.indexOf('Firefox') != -1 || navigator.userAgent.indexOf('MSIE') != -1) ? document.documentElement : document.body,
+        start = doc.scrollTop,
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
+    duration = (typeof(duration) === 'undefined') ? 500: duration;
+    var animateScroll = function(){
+        // increment the time
+        currentTime += increment;
+        // find the value with the quadratic in-out easing function
+        var val = Math.easeInOutQuad(currentTime, start, change, duration);
+        // move the document.body
+        doc.scrollTop = val;
+        // do the animation unless its over
+        if(currentTime < duration) {
+            requestAnimFrame(animateScroll);
+        } else {
+            if (callback && typeof(callback) === 'function') {
+                // the animation is done so lets callback
+                callback();
+            }
+        }
+    };
+    animateScroll();
+}
+
+function animate(elem,style,unit,from,to,time,prop) {
+    if( !elem) return;
+    var start = new Date().getTime(),
+        timer = setInterval(function() {
+            var step = Math.min(1,(new Date().getTime()-start)/time);
+            if (prop) {
+                elem[style] = (from+step*(to-from))+unit;
+            } else {
+                elem.style[style] = (from+step*(to-from))+unit;
+            }
+            if( step == 1) clearInterval(timer);
+        },25);
+    elem.style[style] = from+unit;
+}
+
+window.testClickListener = function(){
+    var element = this.getAttribute('href')
+    var target = element.replace('#', '');
+
+    scrollTo(window.document.getElementById(target).offsetTop);
+};
+
+[].forEach.call( document.querySelectorAll('.__scrollto'), function(scrollToLink) {
+    scrollToLink.addEventListener('click', window.testClickListener, false);
 });
 
 
-(function($){
-    "use strict";
-    $.fn.scrollTo = function( options ) {
-
-        var settings = {
-            offset : 0,       //an integer allowing you to offset the position by a certain number of pixels. Can be negative or positive
-            speed : 'slow',   //speed at which the scroll animates
-            override : null,  //if you want to override the default way this plugin works, pass in the ID of the element you want to scroll through here
-            easing : null //easing equation for the animation. Supports easing plugin as well (http://gsgd.co.uk/sandbox/jquery/easing/)
-        };
-
-        if (options) {
-            if(options.override){
-                //if they choose to override, make sure the hash is there
-                options.override = (override('#') != -1)? options.override:'#' + options.override;
-            }
-            $.extend( settings, options );
-        }
-
-        return this.each(function(i, el){
-            $(el).click(function(e){
-                var idToLookAt;
-                if ($(el).attr('href').match(/#/) !== null) {
-                    e.preventDefault();
-                    idToLookAt = (settings.override)? settings.override:$(el).attr('href');//see if the user is forcing an ID they want to use
-                    //if the browser supports it, we push the hash into the pushState for better linking later
-                    if(history.pushState){
-                        history.pushState(null, null, idToLookAt);
-                        $('html,body').stop().animate({scrollTop: $(idToLookAt).offset().top + settings.offset}, settings.speed, settings.easing);
-                    }else{
-                        //if the browser doesn't support pushState, we set the hash after the animation, which may cause issues if you use offset
-                        $('html,body').stop().animate({scrollTop: $(idToLookAt).offset().top + settings.offset}, settings.speed, settings.easing,function(e){
-                            //set the hash of the window for better linking
-                            window.location.hash = idToLookAt;
-                        });
-                    }
-                }
-            });
-        });
-    };
-})( jQuery );
