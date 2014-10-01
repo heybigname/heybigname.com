@@ -1,8 +1,7 @@
 @include module('section') {
   position: relative;
   margin: 0;
-  padding: 0;
-  height:550px;
+  padding: 30px 0;
 
   @include modifier('introduction') {
     text-align: center;
@@ -15,7 +14,6 @@
 
   @include modifier('about') {
     background: $blue;
-    height: 1000px;
 
     @include breakpoint($tablet) {
       height:650px;
@@ -24,7 +22,6 @@
 
   @include modifier('collective') {
     background: $toothpaste;
-    height:1500px;
 
     @include breakpoint($tablet) {
       height:750px;
@@ -33,6 +30,9 @@
 
   @include modifier('contact') {
     background: $red;
-    height: 550px;
+
+	@include breakpoint($tablet) {
+	  height:550px;
+	}
   }
 }

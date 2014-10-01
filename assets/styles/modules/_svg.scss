@@ -5,6 +5,24 @@
   margin: 0;
   padding: 0;
 
+  &--about {
+	height:700px;
+  }
+
+  &--collective {
+	height:760px;
+  }
+
+  &--contact {
+	height:550px;
+  }
+
+  @include modifier('hide-on-mobile') {
+	display:none;
+	@include breakpoint($tablet) {
+	  display:block;
+	}
+  }
 
   @include element('polygon') {
 
